@@ -1,0 +1,823 @@
+﻿
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+
+.top-bar {
+    background-color: #1531ab;
+    padding: 10px 75px;
+}
+
+a#top-bar-login {
+    color: white;
+}
+
+.bg-light {
+    background-color: #fefefe !important;
+}
+
+.navbar {
+    padding: 0;
+}
+
+#nav_width_wrapper {
+    width: 100%;
+    padding: 0 75px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+#main-nav div, #main-nav a {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    #main-nav div:hover, #main-nav > a:hover {
+        background-color: #1838c2;
+        text-decoration: none;
+    }
+
+    #main-nav div ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 48px;
+        left: -2px;
+        background-color: #1531ab;
+        z-index: 100;
+        font-size: .8em;
+        min-width: 100%;
+        padding: 0;
+        border-top: 1px solid white;
+        -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+        -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+        -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+        transition: opacity 0.2s linear, visibility 0.2s linear;
+    }
+
+        #main-nav div ul li a {
+            white-space: nowrap;
+        }
+
+        #main-nav div ul li {
+            list-style: none;
+            padding: 7px 10px;
+            border: 0 none;
+            border-top: 1px solid #c9c9c9;
+        }
+
+    #main-nav div:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 48px;
+    }
+
+    #main-nav div ul li:hover {
+        background-color: #1838c2;
+        text-decoration: none;
+    }
+
+        #main-nav div ul li:hover a {
+            text-decoration: none;
+        }
+
+#nav-collapse-closebtn {
+    display: none;
+}
+
+#side-search-block {
+    display: none;
+}
+
+.show-on-less-600, .show-on-less-780 {
+    display: none;
+}
+
+
+.navbar-brand span {
+    display: none;
+}
+
+#side-bar-donate, #side-bar-login {
+    display: none;
+}
+
+.form-control.search-box {
+    height: calc(1.5em + .4rem + 2px);
+    border: 1px solid #1531ab;
+    border-radius: 0;
+}
+
+.btn-light.search-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/search-icon1.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 40px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-outline-primary {
+    color: #1531ab;
+    border-color: #1531ab;
+}
+
+.btn, .btn-sm {
+    border-radius: 0;
+}
+
+.btn-light.search-icon:hover {
+    color: #121212;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+#main-nav {
+    font-size: 1.2em;
+    padding: 0px 75px;
+    background-color: #1531ab;
+    color: white;
+}
+
+    #main-nav a {
+        color: white;
+    }
+
+footer {
+    border-top: 1px solid lightgray;
+}
+
+#footer-link {
+    padding: 100px 75px;
+    background-color: #263238;
+}
+
+    #footer-link a {
+        color: lightgrey;
+    }
+
+#footer-bar {
+    background-color: black;
+    font-size: .9em;
+    color: white;
+    padding: 10px 50px;
+}
+
+    #footer-bar p {
+        margin: 0;
+    }
+
+
+/* Home page */
+#banner {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    background-color: #1531ab;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 70px;
+    font-weight: 300;
+}
+
+#banner-title {
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.2em;
+    font-weight: 200;
+}
+
+#banner-text {
+    line-height: 1.4em;
+    padding: 20px 0 50px;
+}
+
+#banner-moto {
+    font-size: 1.8rem;
+}
+
+
+#quick-links {
+    background-color: #000c7b;
+    color: white;
+}
+
+.list-group {
+    border: none;
+}
+
+.list-group-item {
+    background-color: inherit;
+    color: inherit;
+    height: 100px;
+}
+
+    .list-group-item:first-child, .list-group-item:last-child {
+        border-radius: 0;
+    }
+
+.list-group-item-action {
+    transition: background-color linear 400ms;
+}
+
+    .list-group-item-action:hover, .list-group-item-action:focus {
+        z-index: 1;
+        color: inherit;
+        text-decoration: none;
+        background-color: #1531ab;
+    }
+
+.home-post-body {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+/* End of home page*/
+/*Blog post feature*/
+.list-post-block {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    background-color: #E3F2FD;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 250px;
+    transition: box-shadow 500ms, background-color 500ms;
+}
+
+    .list-post-block:hover {
+        background-color: #BBDEFB;
+    }
+
+.post-text {
+    max-height: 200px;
+}
+
+    .post-text > * {
+        flex-shrink: 1;
+    }
+
+.post-title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+a.post-title {
+    color: black;
+    transition: color 300ms;
+}
+
+    a.post-title:hover {
+        color: black;
+        text-decoration: none;
+        color: blue;
+    }
+
+.post-attr {
+    font-style: italic;
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.post-body {
+    overflow: hidden;
+}
+
+a.post-image {
+    transition: box-shadow 500ms;
+    padding: 0;
+    max-height: 200px;
+}
+
+    a.post-image:hover {
+        -webkit-box-shadow: 0px 0px 3px 1px rgba(100,181,246,1);
+        -moz-box-shadow: 0px 0px 3px 1px rgba(100,181,246,1);
+        box-shadow: 0px 0px 3px 1px rgba(100,181,246,1);
+        text-decoration: none;
+    }
+
+.pseudo-img {
+    background-color: #F5F5F5;
+    color: #424242;
+    width: 100%;
+    max-height: 250px;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    -webkit-box-shadow: inset 0px 0px 5px 1px rgba(224,224,224,1);
+    -moz-box-shadow: inset 0px 0px 5px 1px rgba(224,224,224,1);
+    box-shadow: inset 0px 0px 5px 1px rgba(224,224,224,1);
+}
+
+a.pseudo-img:hover {
+    color: #424242;
+}
+
+#post-attr, #post-body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#post-attr {
+    padding: 10px 60px;
+    font-style: italic;
+}
+
+#post-body {
+    white-space: pre-wrap;
+    padding-bottom: 20px;
+}
+
+
+/*End of Blog post feature*/
+
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 1200px) {
+    #main-nav div, #main-nav a {
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #main-nav div, #main-nav a {
+        font-size: .9em;
+    }
+}
+
+@media screen and (min-width: 921px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+
+    #side-nav {
+        display: none;
+    }
+}
+
+
+
+#side-nav div ul {
+    display: none;
+    z-index: 100;
+    font-size: .8em;
+    padding: 0;
+}
+
+@media screen and (max-width: 920px) {
+    #main-nav {
+        display: none !important;
+    }
+
+    #side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        background-color: #263238;
+        overflow-x: scroll;
+        padding-top: 40px;
+        transition: 0.5s;
+        color: white;
+    }
+
+    #nav-collapse-closebtn {
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 210px;
+        font-size: 36px;
+    }
+
+
+
+    #side-nav div, #side-nav a {
+        position: relative;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #side-nav a {
+        color: white;
+    }
+
+    #side-nav div:hover, #side-nav > a:hover {
+        text-decoration: none;
+    }
+
+    #side-nav div ul li {
+        list-style: none;
+        padding: 7px 10px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #main-search-block {
+        display: none;
+    }
+
+    #side-search-block {
+        display: block;
+    }
+
+    #nav_width_wrapper {
+        padding: 0 50px;
+    }
+
+    .show-on-less-780 {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .list-post-block {
+        height: auto;
+    }
+
+    a.post-image {
+        max-height: 300px;
+    }
+
+        a.post-image.img-fluid {
+            height: 100%;
+            width: auto;
+        }
+}
+
+@media screen and (max-width: 600px) {
+    #nav_width_wrapper {
+        padding: 0 25px;
+    }
+
+    .navbar-brand img {
+        display: none;
+    }
+
+    .navbar-brand {
+        margin: 0;
+    }
+
+        .navbar-brand span {
+            display: inline-block;
+            text-transform: uppercase;
+            margin-left: 10px;
+            padding-left: 25px;
+            color: white;
+            font-size: 1.5em !important;
+        }
+
+    nav {
+        padding-top: 40px !important;
+        padding-bottom: 15px !important;
+        background-color: #1531ab !important;
+    }
+
+    #main-emergency-btn {
+        color: white;
+        border-color: white;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    #side-bar-donate, #side-bar-login {
+        display: inline-block;
+    }
+
+    #side-bar-donate {
+        width: 100%;
+    }
+
+    #banner {
+        background-image: none;
+        text-align: center;
+        padding: 50px 40px;
+    }
+
+    .show-on-less-600 {
+        display: inline-block;
+    }
+
+    #patient-login-link a {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .navbar-brand span {
+        font-size: 1.3em !important;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-brand span {
+        font-size: 1.2em !important;
+        padding-left: 15px;
+    }
+}
+
+/*START OF ENRINA FEATURE CSS STYLE*/
+
+
+/********************************CONTACT US FEATURE CSS***********************************/
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.center-div {
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading-h2 {
+    padding-top: 20px;
+}
+
+.contact-message {
+    width: 650px;
+}
+
+th {
+    background: #1531AB;
+}
+
+td a {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+    td a:hover {
+        color: #1531ab;
+        text-decoration: none;
+    }
+
+.pagination {
+    color: #1531ab;
+}
+
+.submit {
+    padding: 10px 30px;
+    margin-top: 10px;
+    background: #1531ab;
+    color: white;
+}
+
+    .submit:hover {
+        margin-top: 10px;
+        background: #00b0cc;
+        color: white;
+    }
+
+.contacts-read {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#nav-inbox-tab {
+    color: red;
+    border: none;
+    background: #F9F4F5;
+    border-bottom: 2px solid red;
+}
+
+    #nav-inbox-tab:hover {
+        border: none;
+        background: #F9F4F5;
+        border-bottom: 2px solid #2d2d2d;
+    }
+
+#nav-read-message-tab {
+    border: none;
+    background: #F9F4F5;
+    border-bottom: 2px solid #00b0cc;
+}
+
+    #nav-read-message-tab:hover {
+        border: none;
+        background: #F9F4F5;
+        border-bottom: 2px solid green;
+    }
+
+.nav-tabs {
+    background: #F9F4F5;
+    width: 100%;
+}
+/********************************CONTACT US FEATURE CSS***********************************/
+/********************************FAQS CSS************************************************/
+.faq-arrow-down {
+    float: right;
+}
+
+.faq-btn {
+    background: #1531AB;
+    color: #fff;
+}
+
+    .faq-btn:hover {
+        background: #000c7b;
+        color: #fff;
+    }
+.panel{
+    border: none!important;
+}
+
+/********************************FAQS CSS************************************************/
+/********************************ALERT POSTS CSS*****************************************/
+/*#alert {
+    display: none;
+}*/
+.alert-icon {
+    color: #2d2d2d !important;
+    font-size: 20px;
+}
+
+    .alert-icon:hover {
+        color: blue !important;
+    }
+
+.alert-container {
+    text-align: center;
+}
+
+.alert-title {
+    padding: 10px 60px;
+    /*margin: 0 auto;*/
+    background: #fffde3;
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+}
+
+    .alert-title li {
+        list-style: none;
+        margin: 10px;
+    }
+
+    .alert-title a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .alert-title a {
+        font-size: 10px;
+        padding: 5px 20px;
+        margin-top: 10px;
+        background: #1531ab;
+        color: white;
+    }
+
+        .alert-title a:hover {
+            margin-top: 10px;
+            background: #00b0cc;
+            color: white;
+        }
+
+.alert-status-active {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 14px;
+    background: #1531ab;
+    color: #fff;
+}
+
+    .alert-status-active:hover, .alert-status-inactive:hover {
+        background: #00b0cc;
+        color: white;
+    }
+
+.alert-status-inactive {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 10px;
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.alert-title-table {
+    width: 650px;
+}
+
+.alert-readMore a {
+    background-color: #1531AB;
+    color: #fff;
+    font-size: 12px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5% !important;
+}
+
+    .carousel-control-prev:focus:focus, .carousel-control-next:focus {
+        border: 5px solid red;
+    }
+
+/*.btn:focus, a:focus {
+    border: 5px solid red;
+}*/
+/********************************ALERT POSTS CSS*****************************************/
+.details-description p {
+    text-align: justify !important;
+}
+
+.details-span {
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    .form-group {
+        display: block;
+    }
+}
+
+/********************************PAGINATION CSS*****************************************/
+.pagination {
+    overflow: hidden;
+    float: right;
+    padding-bottom: 10px;
+}
+
+/*START OF ENRINA FEATURE CSS STYLE*/

@@ -1,0 +1,33 @@
+﻿@model SensenHosp.Models.FreqAskQuestion
+@{
+    ViewData["Title"] = "Edit";
+}
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<h2 class="heading heading-h2">Admin Dashboard</h2>
+<h3 class="heading">Update Frequently Asked Questions</h3>
+<hr />
+<div class="row">
+    <div class="col-md-8  center-div">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Question" class="control-label"></label>
+                <input asp-for="Question" class="form-control" />
+                <span asp-validation-for="Question" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Answer" class="control-label"></label>
+                <textarea asp-for="Answer" rows="7" cols="45" class="form-control"></textarea>
+                <span asp-validation-for="Answer" class="text-danger"></span>
+            </div>
+            <script>
+                CKEDITOR.replace('Answer');
+            </script>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-default submit" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />

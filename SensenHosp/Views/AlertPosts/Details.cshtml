@@ -1,0 +1,26 @@
+﻿@model SensenHosp.Models.AlertPosts
+@{
+    ViewData["Title"] = "Details";
+}
+<h2 class="heading heading-h2">@Html.DisplayFor(model => model.AlertTitle)</h2>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-10  center-div">
+            <div>
+                <a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-arrow-left">&nbsp;Back to Homepage</i></a>  |
+                <a asp-action="Edit" asp-route-id="@Model.ID" class="submit">Update</a>&nbsp;&nbsp;
+                <a asp-action="Delete" asp-route-id="@Model.ID" class="submit">Delete</a>
+            </div>
+            <br />
+            <h6>Alert Status:&nbsp;<span class="details-span">@Html.DisplayFor(model => model.AlertStatus)</span></h6>
+            <h6>Date of Effectivity:&nbsp;<span class="details-span">@Html.DisplayFor(model => model.DateEffectivity)</span></h6>
+            <div class="details-description">
+                <h6>Description:</h6>
+                <p>@Html.Raw(Model.Description)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />

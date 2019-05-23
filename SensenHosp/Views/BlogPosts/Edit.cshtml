@@ -1,0 +1,57 @@
+﻿@model SensenHosp.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="text-center">Edit '@Model.Title'</h2>
+<hr />
+<div class="row">
+    <div class="col-md-10 m-auto">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (Model.HasImg == 1)
+            {
+                <img src="~/Uploads/Blog/FeatureImages/@Model.ImgName" class="img-fluid"/>
+            }
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @if (Model.HasImg == 1)
+                {
+                    <label class="control-label">Edit feature image</label>
+                }
+                else
+                {
+                    <label class="control-label">Add feature image</label>
+                }
+                <div>
+                    <input type="file" name="file" id="file" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Body" class="control-label"></label>
+                <textarea asp-for="Body" class="form-control" rows="10"></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogCategoryID" class="control-label"></label>
+                <select asp-for="BlogCategoryID" class="form-control" asp-items="ViewBag.BlogCategoryID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

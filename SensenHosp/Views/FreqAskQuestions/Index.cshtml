@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SensenHosp.Models.FreqAskQuestion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="heading heading-h2">Frequently Asked Questions</h2>
+<hr />
+<div class="row faq-row">
+    <div class="col-md-8  center-div">
+        <div class="pagination" style="overflow:hidden;float:right;padding-bottom:10px;">
+            <div>
+                @ViewData["PaginationSummary"]
+                @Html.ActionLink("Prev",
+                    "Index",
+                    "FreqAskQuestions",
+                    new { pagenum= ((int)ViewData["pagenum"]-1)}
+                    )
+                |
+                @Html.ActionLink("Next",
+                    "Index",
+                    "FreqAskQuestions",
+                    new { pagenum = ((int)ViewData["pagenum"] + 1) }
+                    )
+            </div>
+        </div>
+        <div class="faqAccordion-container">
+            <div class="accordion panel-group" id="faqAccordion">
+
+                <!--THIS VARIABLE IS TO GENERATE A LOOP TO OF NUMBER SO I CAN ATTACH THIS TO THE ID OF ACCORDION AND IT WILL MAKE IT UNQIUE TO EACH OTEHR
+                    SO WHEN USER CLICKS ONLY SPECIFIC QUESTIONAND ANSWER IWLL BE VIEWED-->
+                @{int ij = 1;}
+                @foreach (var item in Model)
+                {
+                    <div class="panel panel-default accordion card" style="width: 100%;">
+                        <div>
+                            <h4 class="ml-auto">
+                                <button type="button" class="btn btn-block btn-lg text-left faq-btn" data-toggle="collapse" data-parent="#faqAccordion" href="#collapse_@ij" aria-expanded="true" aria-controls="collapse_@ij">
+                                    @Html.DisplayFor(modelItem => item.Question)<span class="mr-auto fas fa-chevron-down faq-arrow-down"></span>
+                                </button>
+
+                            </h4>
+                        </div>
+                        <div id="collapse_@ij" class="panel-collapse collapse">
+                            <div class="card-body">
+                                <p>@Html.Raw(item.Answer)</p>
+                            </div>
+                        </div>
+                    </div>
+                    ij++;
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />

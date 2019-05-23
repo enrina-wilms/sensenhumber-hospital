@@ -1,0 +1,26 @@
+﻿@model SensenHosp.Models.FreqAskQuestion
+@{
+    ViewData["Title"] = "Details";
+}
+<h2 class="heading heading-h2">@Html.DisplayFor(model => model.Question)</h2>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-10  center-div">
+            <div>
+                <a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-arrow-left">&nbsp;Back to Homepage</i></a>  |
+                <a asp-action="Edit" asp-route-id="@Model.ID" class="submit">Update</a>&nbsp;&nbsp;
+                <a asp-action="Delete" asp-route-id="@Model.ID" class="submit">Delete</a>
+            </div>
+            <br />
+            <h6>Alert Status:&nbsp;<span class="details-span">@Html.DisplayFor(model => model.Question)</span></h6>
+            <p>Date Created:&nbsp;<span class="details-span">@Html.DisplayFor(model => model.DateCreated)</span></p>
+            <div class="details-description">
+                <h6>Answer:</h6>
+                <p>@Html.Raw(Model.Answer)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />

@@ -1,0 +1,14 @@
+﻿@model SensenHosp.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Are you sure you want to delete '@Model.Title'?</h3>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-secondary" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SensenHosp.Models.AlertPosts>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="alert-container container-fluid">
+    <div class="alert-tittle">
+        <ul>
+            @foreach (var item in Model)
+            {
+                @if (item.AlertStatus == "Active")
+                {
+                    <li>@Html.DisplayFor(modelItem => item.AlertTitle) &nbsp <a asp-action="ReadMore" asp-route-id="@item.ID">Read More</a></li>
+
+                }
+
+            }
+        </ul>
+
+    </div>
+</div>
+<br />
+<br />

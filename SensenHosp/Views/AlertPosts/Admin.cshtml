@@ -1,0 +1,76 @@
+﻿@model IEnumerable<SensenHosp.Models.AlertPosts>
+@{
+    ViewData["Title"] = "Admin";
+}
+<h2 class="heading heading-h2">ADMIN DASHBOARD</h2>
+<h3 class="heading">Alert Posts</h3>
+<a asp-action="Create" class="submit">Create New</a>
+<br />
+<div class="pagination">
+    <div>
+        @ViewData["pagesummary"]
+        @Html.ActionLink("Prev",
+            "Admin",
+            "AlertPosts",
+            new { pagenum= ((int)ViewData["pagenum"]-1)}
+            )
+        |
+        @Html.ActionLink("Next",
+            "Admin",
+            "AlertPosts",
+            new { pagenum = ((int)ViewData["pagenum"] + 1) }
+            )
+    </div>
+</div>
+<table class="table table-hover">
+    <thead class="text-light bg-primary">
+        <tr>
+            <th class="alert-title-table" colspan="2">
+                @Html.DisplayNameFor(model => model.AlertTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlertStatus)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <br />
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="alert-title-table" colspan="2">
+                    <a asp-action="Details" asp-route-id="@item.ID" style="font-size:14px;">@Html.DisplayFor(modelItem => item.AlertTitle)</a>
+                </td>
+                <td>
+                    <!--THIS WILL SHOW THE STATUS OF THE ALERTPOST ADMIN CAN ALSO CLICK THE BUTTON AND REDIRECT TO UPDATE PAGE TO UPDATE THE STATUS OF THE ALERT POST-->
+                    @if (item.AlertStatus == "Active")
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.ID">
+                            <span class="alert-status-active">
+                                @Html.DisplayFor(modelItem => item.AlertStatus)
+                            </span>
+                        </a>
+
+                    }
+                    else
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.ID">
+                            <span class="alert-status-inactive">
+                                @Html.DisplayFor(modelItem => item.AlertStatus)
+                            </span>
+                        </a>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID"><i class="fas fa-envelope-open-text" title="Mark as Read"></i></a>&nbsp;&nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.ID"><i class="fas fa-trash-alt" title="Delete"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />

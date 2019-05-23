@@ -1,0 +1,30 @@
+﻿@model SensenHosp.Models.Payments
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h2 id="page_title" class="text-center">Payment</h2>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="CreateOrder" method="post" id="payment_form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="amount" class="control-label"></label>
+                <input asp-for="amount" class="form-control" id="paymentAmount" />
+                <small>Type your bill amount</small>
+                <span asp-validation-for="amount" class="text-danger"></span>
+            </div>
+            <div id="paypal-button-container"></div>
+        </form>
+        <div id="payment_success" class="hidden">
+            <p>Thank you <span id="PayerName"></span> for your Payment.</p>
+            <p>All hospital staff, patients and their family are grateful to your step towards green earth.</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
